@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>04_JS是单线程的</title>
+    <meta charset="UTF-8">
+    <title>04_JS是单线程的</title>
 </head>
 <body>
 <!--
@@ -25,25 +25,27 @@
   * 后面在某个时刻才会执行回调代码
 -->
 <script type="text/javascript">
-  setTimeout(function () {
-    console.log('timeout 2222')
-    alert('22222222')
-  }, 2000)
-  setTimeout(function () {
-    console.log('timeout 1111')
-    alert('1111111')
-  }, 1000)
-  setTimeout(function () {
-    console.log('timeout() 00000')
-  }, 0)
-  function fn() {
-    console.log('fn()')
-  }
-  fn()
+    setTimeout(function () {
+        console.log('timeout 2222')
+        alert('22222222')
+    }, 2000)
+    setTimeout(function () {
+        console.log('timeout 1111')
+        alert('1111111')
+    }, 1000)
+    setTimeout(function () {
+        console.log('timeout() 00000')
+    }, 0)
 
-  console.log('alert()之前')
-  alert('------') //暂停当前主线程的执行, 同时暂停计时, 点击确定后, 恢复程序执行和计时
-  console.log('alert()之后')
+    function fn() {
+        console.log('fn()')
+    }
+
+    fn()
+
+    console.log('alert()之前')
+    alert('------') //暂停当前主线程的执行, 同时暂停计时, 点击确定后, 恢复程序执行和计时
+    console.log('alert()之后')
 </script>
 </body>
 </html>

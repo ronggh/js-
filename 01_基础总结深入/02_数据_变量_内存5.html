@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>02_内存管理</title>
+    <meta charset="UTF-8">
+    <title>02_内存管理</title>
 </head>
 <body>
 <!--
@@ -16,15 +16,15 @@
   * 对象: 成为垃圾对象==>垃圾回收器回收
 -->
 <script type="text/javascript">
-  var a = 3
-  var obj = {}
-  obj = undefined
+    var a = 3
+    var obj = {}
+    obj = undefined
 
-  function fn () {
-    var b = {}
-  }
+    function fn() {
+        var b = {}
+    }
 
-  fn() // b是自动释放, b所指向的对象是在后面的某个时刻由垃圾回收器回收
+    fn() // b是自动释放, b所指向的对象是在后面的某个时刻由垃圾回收器回收
 </script>
 </body>
 </html>

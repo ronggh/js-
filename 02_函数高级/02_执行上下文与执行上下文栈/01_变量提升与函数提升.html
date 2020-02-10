@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>01_变量提升与函数提升</title>
+    <meta charset="UTF-8">
+    <title>01_变量提升与函数提升</title>
 </head>
 <body>
 <!--
@@ -15,29 +15,32 @@
 3. 问题: 变量提升和函数提升是如何产生的?
 -->
 <script type="text/javascript">
-  console.log('-----')
-  /*
-  面试题 : 输出 undefined
-   */
-  var a = 3
-  function fn () {
-    console.log(a)
-    var a = 4
-  }
-  fn()
+    console.log('-----')
+    /*
+    面试题 : 输出 undefined
+     */
+    var a = 3
 
-  console.log(b) //undefined  变量提升
-  fn2() //可调用  函数提升
-  // fn3() //不能  变量提升
+    function fn() {
+        console.log(a)
+        var a = 4
+    }
 
-  var b = 3
-  function fn2() {
-    console.log('fn2()')
-  }
+    fn()
 
-  var fn3 = function () {
-    console.log('fn3()')
-  }
+    console.log(b) //undefined  变量提升
+    fn2() //可调用  函数提升
+    // fn3() //不能  变量提升
+
+    var b = 3
+
+    function fn2() {
+        console.log('fn2()')
+    }
+
+    var fn3 = function () {
+        console.log('fn3()')
+    }
 </script>
 </body>
 </html>

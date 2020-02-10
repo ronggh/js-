@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>04_执行上下文栈2</title>
+    <meta charset="UTF-8">
+    <title>04_执行上下文栈2</title>
 </head>
 <body>
 <!--
@@ -18,18 +18,20 @@
 2. 整个过程中产生了几个执行上下文?  5
 -->
 <script type="text/javascript">
-  console.log('gb: '+ i)
-  var i = 1
-  foo(1)
-  function foo(i) {
-    if (i == 4) {
-      return
+    console.log('gb: ' + i)
+    var i = 1
+    foo(1)
+
+    function foo(i) {
+        if (i == 4) {
+            return
+        }
+        console.log('fb:' + i)
+        foo(i + 1) //递归调用: 在函数内部调用自己
+        console.log('fe:' + i)
     }
-    console.log('fb:' + i)
-    foo(i + 1) //递归调用: 在函数内部调用自己
-    console.log('fe:' + i)
-  }
-  console.log('ge: ' + i)
+
+    console.log('ge: ' + i)
 </script>
 </body>
 </html>

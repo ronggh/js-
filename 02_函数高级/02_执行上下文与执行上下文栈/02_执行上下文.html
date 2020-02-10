@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>02_执行上下文</title>
+    <meta charset="UTF-8">
+    <title>02_执行上下文</title>
 </head>
 <body>
 <!--
@@ -27,15 +27,17 @@
   * 开始执行函数体代码
 -->
 <script type="text/javascript">
-  console.log(a1, window.a1)
-  window.a2()
-  console.log(this)
+    console.log(a1, window.a1)
+    window.a2()
+    console.log(this)
 
-  var a1 = 3
-  function a2() {
-    console.log('a2()')
-  }
-  console.log(a1)
+    var a1 = 3
+
+    function a2() {
+        console.log('a2()')
+    }
+
+    console.log(a1)
 
 </script>
 </body>
