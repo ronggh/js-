@@ -1,6 +1,6 @@
 function myModule() {
     //私有数据
-    var msg = 'My atguigu'
+    var msg = 'My alan'
 
     //操作数据的函数
     function doSomething() {

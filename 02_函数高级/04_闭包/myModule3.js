@@ -1,4 +1,4 @@
-;(function () {
+;(function (window) {
     //私有数据
     var msg = 'My alan'
 
@@ -12,8 +12,8 @@
     }
 
     //向外暴露对象(给外部使用的方法)
-    window.myModule2 = {
+    window.myModule3 = {
         doSomething: doSomething,
         doOtherthing: doOtherthing
     }
-})()
+})(window)

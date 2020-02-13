@@ -11,6 +11,7 @@
 2. 利用super()借用父类型构建函数初始化相同属性
 -->
 <script type="text/javascript">
+    // 父类
     function Person(name, age) {
         this.name = name
         this.age = age
@@ -20,6 +21,7 @@
         this.name = name
     }
 
+    // 子类
     function Student(name, age, price) {
         Person.call(this, name, age)  // 为了得到属性
         this.price = price
